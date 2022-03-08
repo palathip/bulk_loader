@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ApplicationHdRepository extends JpaRepository<ApplicationHd, Long> {
+public interface ApplicationHdRepository  extends JpaRepository<ApplicationHd, Long> {
     List<ApplicationHd> findTop10By();
 }
