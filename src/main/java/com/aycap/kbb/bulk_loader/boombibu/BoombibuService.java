@@ -14,6 +14,11 @@ public class BoombibuService {
     @Autowired
     BoombibuRepository boombibuRepository;
 
+    public List<Boombibu> get(){
+        return boombibuRepository.findAll();
+    }
+
+
     public Boombibu post(Boombibu boombibu) throws IOException {
 
         boombibuRepository.save(boombibu);

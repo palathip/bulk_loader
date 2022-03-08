@@ -19,8 +19,13 @@ public class BoombibuController {
     @Autowired
     BoombibuService boombibuService;
 
+    @GetMapping()
+    public ResponseEntity<List<Boombibu>> BoombibuGet(){
+        return ResponseEntity.ok(boombibuService.get());
+    }
+
     @PostMapping()
-    public ResponseEntity<Boombibu> applicationHeader(
+    public ResponseEntity<Boombibu> Boombibu(
             @RequestBody Boombibu boombibu) throws IOException {
         return ResponseEntity.ok(boombibuService.post(boombibu));
     }

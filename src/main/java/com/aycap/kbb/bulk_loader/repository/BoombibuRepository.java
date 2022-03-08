@@ -8,4 +8,6 @@ import java.util.List;
 
 @Repository
 public interface BoombibuRepository extends JpaRepository<Boombibu, Long> {
+    @Override
+    List<Boombibu> findAll();
 }
