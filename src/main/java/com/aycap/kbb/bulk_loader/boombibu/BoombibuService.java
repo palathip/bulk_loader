@@ -18,9 +18,7 @@ public class BoombibuService {
         return boombibuRepository.findAll();
     }
 
-
     public Boombibu post(Boombibu boombibu) throws IOException {
-
         boombibuRepository.save(boombibu);
         return boombibu;
     }
